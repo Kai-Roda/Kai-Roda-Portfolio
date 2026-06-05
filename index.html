@@ -1,13 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>website</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kai Roda'sPortfolio</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Ensure the root elements fill the viewport */
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            /* keep a fallback color while the image loads */
+            background: black;
+            margin: 0;
+            /* Prevent any scrolling so the monitor stays aligned */
+            overflow: hidden;
+            overscroll-behavior: none;
+        }
+
+        /* Container fills viewport so children can use 100% sizing */
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* Make the background image cover the entire viewport */
+        .background {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            image-rendering: pixelated;
+            display: block;
+            z-index: -1;
+        }
+
+        /* MONITOR SCREEN AREA */
+        .monitor-screen {
+            position: absolute;
+
+            left: 22.9%;
+            top: 25.5%;
+
+            width: 56.5%;
+            height: 45%;
+
+            overflow: hidden;
+            background: black;
+        }
+
+        /* DESKTOP IMAGE */
+        .desktop-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            image-rendering: pixelated;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <img src="portfolio.png" class="background">
+
+        <div class="monitor-screen">
+
+            <!-- DESKTOP IMAGE -->
+            <!-- PUT YOUR DESKTOP IMAGE FILE NAME HERE -->
+            <img src="desktop.png" class="desktop-image">
+
+        </div>
+
+    </div>
+
+</body>
 </html>
+```
